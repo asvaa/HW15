@@ -12,26 +12,18 @@ import SuperRange from "./common/c7-SuperRange/SuperRange";
 
 function HW11() {
   // for autotests // не менять // можно подсунуть в локалСторэдж нужные числа, чтоб увидеть как они отображаются
-
-  // const [value1, setValue1] = useState(restoreState<number>("hw11-value1", 0));
-  // const [value2, setValue2] = useState(
-  //   restoreState<number>("hw11-value2", 100)
-  // );
-  const [value1, setValue1] = useState(
-    restoreState<number>("hw11-value1",0)
-  );
+  const [value1, setValue1] = useState(restoreState<number>("hw11-value1", 0));
   const [value2, setValue2] = useState(
     restoreState<number>("hw11-value2", 100)
   );
 
-  const change = (event: Event, newValue: number | number[]) => {
-    if (Array.isArray(newValue)) {
-      // Для диапазонного слайдера
-      setValue1(newValue[0]);
-      setValue2(newValue[1]);
+  const change = (event: any, value: any) => {
+    // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
+    if (Array.isArray(value)) {
+      setValue1(value[0]);
+      setValue2(value[1]);
     } else {
-      // Для обычного слайдера
-      setValue1(newValue);
+      setValue1(value);
     }
   };
 
@@ -47,6 +39,7 @@ function HW11() {
             </span>
             <SuperRange
               id={"hw11-single-slider"}
+              // сделать так чтоб value1 изменялось // пишет студент
               value={value1}
               onChange={change}
             />
@@ -57,6 +50,7 @@ function HW11() {
             </span>
             <SuperRange
               id={"hw11-double-slider"}
+              // сделать так чтоб value1/2 изменялось // пишет студент
               value={[value1, value2]}
               onChange={change}
             />
