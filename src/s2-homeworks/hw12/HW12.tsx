@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeThemeId } from "./bll/themeReducer";
 import { AppStoreType } from "../hw10/bll/store";
 
+const loading = useSelector((state: AppStoreType) => state.loading);
+const themeId = useSelector((state: AppStoreType) => state.theme.themeId);
 /*
  * 1 - в файле themeReducer.ts написать нужные типы вместо any, дописать редьюсер
  * 2 - получить themeId из редакса
@@ -21,6 +23,7 @@ const themes = [
 
 const HW12 = () => {
   const themeId = useSelector((state: AppStoreType) => state.theme.themeId);
+  const loading = useSelector((state: AppStoreType) => state.loading); 
   const dispatch = useDispatch();
 
   const change = (id: number) => {
@@ -36,7 +39,6 @@ const HW12 = () => {
       <div id={"hw12-text"} className={s2.hwTitle}>
         Homework #12
       </div>
-
       <div className={s2.hw}>
         <div className={s.hw12Block}>
           <div className={s.hw12Label}>Выберите тему</div>
