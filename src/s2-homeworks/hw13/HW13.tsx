@@ -18,7 +18,7 @@ const HW13 = () => {
   const send = (x?: boolean | null) => () => {
     const url =
       x === null
-        ? "http://this-domain-will-never-exist-123456789.com"
+        ? "http://notarealdomain321321321.ru"
         : "https://samurai.it-incubator.io/api/3.0/homework/test";
 
     setCode("");
