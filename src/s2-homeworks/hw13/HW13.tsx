@@ -18,7 +18,7 @@ const HW13 = () => {
   const send = (x?: boolean | null) => () => {
     const url =
       x === null
-        ? "https://xxxxxx.ccc"
+        ? "http://abracadabra.nowhere"
         : "https://samurai.it-incubator.io/api/3.0/homework/test";
 
     setCode("");
