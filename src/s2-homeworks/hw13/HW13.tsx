@@ -17,10 +17,10 @@ const HW13 = () => {
 
   const send = (x?: boolean | null) => () => {
     const url =
-      x === null
-        ? "https://xxxxxx.ccc"
-        : "https://samurai.it-incubator.io/api/3.0/homework/test";
-
+    x === null
+      ? "http://abracadabra.error.abc"
+      : "https://samurai.it-incubator.io/api/3.0/homework/test";
+  
     setCode("");
     setImage("");
     setText("");
