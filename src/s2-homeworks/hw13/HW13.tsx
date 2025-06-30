@@ -22,15 +22,19 @@ const HW13 = () => {
       setText("");
       setInfo("...loading");
       setDisabled(true);
-      fetch("http://notarealdomain321321321.ru", { method: "POST" })
-        .then(() => {})
-        .catch((e) => {
-          setCode("Error!");
-          setImage(errorUnknown);
-          setText("Network Error\nAxiosError");
-          setInfo("Error");
-        })
-        .finally(() => setDisabled(false));
+
+      // Даем React отрисовать disabled
+      setTimeout(() => {
+        fetch("http://notarealdomain321321321.ru", { method: "POST" })
+          .then(() => {})
+          .catch(() => {
+            setCode("Error!");
+            setImage(errorUnknown);
+            setText("Network Error\nAxiosError");
+            setInfo("Error");
+          })
+          .finally(() => setDisabled(false));
+      }, 100);
       return;
     }
 
