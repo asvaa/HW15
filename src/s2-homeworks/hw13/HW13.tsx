@@ -16,10 +16,25 @@ const HW13 = () => {
   const [disabled, setDisabled] = useState(false);
 
   const send = (x?: boolean | null) => () => {
-    const url =
-      x === null
-        ? "http://notarealdomain321321321.ru"
-        : "https://samurai.it-incubator.io/api/3.0/homework/test";
+    if (x === null) {
+      setCode("");
+      setImage("");
+      setText("");
+      setInfo("...loading");
+      setDisabled(true);
+      fetch("http://notarealdomain321321321.ru", { method: "POST" })
+        .then(() => {})
+        .catch((e) => {
+          setCode("Error!");
+          setImage(errorUnknown);
+          setText("Network Error\nAxiosError");
+          setInfo("Error");
+        })
+        .finally(() => setDisabled(false));
+      return;
+    }
+
+    const url = "https://samurai.it-incubator.io/api/3.0/homework/test";
 
     setCode("");
     setImage("");
@@ -57,11 +72,6 @@ const HW13 = () => {
             setText("Неизвестная ошибка");
             setInfo("");
           }
-        } else {
-          setCode("Error!");
-          setImage(errorUnknown);
-          setText("Network Error\nAxiosError");
-          setInfo("Error"); // ОБЯЗАТЕЛЬНО для теста!
         }
       })
       .finally(() => setDisabled(false));
