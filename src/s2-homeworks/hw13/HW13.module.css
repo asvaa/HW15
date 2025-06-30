@@ -1,22 +1,49 @@
 .buttonsContainer {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+  justify-content: center;
 }
 
 .responseContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
 }
 
 .imageContainer {
+  flex: 0 0 400px; /* или нужная ширина */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
+  max-width: 100%;
+  height: auto;
 }
 
-.textContainer{
+.textContainer {
+  margin-left: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .code {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 18px;
 }
 
 .text {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  white-space: pre-line; /* для перевода строк \n */
 }
+
 .info {
+  color: #666;
+  font-size: 1rem;
 }
