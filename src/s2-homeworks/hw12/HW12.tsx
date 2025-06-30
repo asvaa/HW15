@@ -19,7 +19,7 @@ const themes = [
   { id: 3, value: "dark" },
 ];
 
-const HW12 = () => {
+export const HW12 = () => {
   const themeId = useSelector((state: AppStoreType) => state.theme.themeId);
   const dispatch = useDispatch();
 
@@ -45,12 +45,10 @@ const HW12 = () => {
             className={s.select}
             options={themes}
             value={themeId}
-            onChangeOption={(id) => change(Number(id))}
+            onChangeOption={(option) => change(Number(option.id))}
           />
         </div>
       </div>
     </div>
   );
 };
-
-export default HW12;
