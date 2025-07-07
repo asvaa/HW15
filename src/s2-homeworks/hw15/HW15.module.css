@@ -1,27 +1,59 @@
 .tech {
-    width: 50vw;
+  width: 50vw;
+  padding: 8px 10px;
+  font-size: 16px;
+  color: #343434;
+  box-sizing: border-box;
+  /* border-bottom: 1px solid #e5e5e5; */ /* если нужны разделители */
 }
 
 .developer {
-
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 16px;
+  color: #343434;
+  box-sizing: border-box;
+  /* border-bottom: 1px solid #e5e5e5; */
 }
 
 .techHeader {
-    width: 50vw;
+  width: 50vw;
+  padding: 8px 10px;
+  font-weight: bold;
+  font-size: 16px;
+  background: #f7f7f8;
+  color: #343434;
+  box-sizing: border-box;
 }
 
 .developerHeader {
-
+  flex: 1;
+  padding: 8px 10px;
+  font-weight: bold;
+  font-size: 16px;
+  background: #f7f7f8;
+  color: #343434;
+  box-sizing: border-box;
 }
 
 .row {
-    display: flex;
+  display: flex;
+  border-bottom: 1px solid #ececec; /* разделение строк */
+  align-items: center;
+  min-height: 40px;
 }
 
 .rowHeader {
-    display: flex;
+  display: flex;
+  border-bottom: 2px solid #d2d2d2; /* более жирная линия для хедера */
+  background: #f7f7f8;
+  align-items: center;
 }
 
 .loading {
-
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #008cff;
+  margin: 16px 0;
 }

@@ -1,11 +1,18 @@
 .pagination {
-    display: flex;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* расстояние между элементами */
+  margin-bottom: 20px; /* если нужно, добавить отступ снизу */
 }
 
 .text1 {
-
+  margin-left: 12px; /* небольшой отступ слева от пагинации */
+  font-size: 14px;
+  color: #343434;
 }
 
 .text2 {
-
+  margin-left: 8px; /* небольшой отступ слева от селекта */
+  font-size: 14px;
+  color: #343434;
 }
